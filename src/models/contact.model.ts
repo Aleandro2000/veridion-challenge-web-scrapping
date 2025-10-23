@@ -37,7 +37,7 @@ const contactDataSchema = new mongoose.Schema({
         type: String,
         default: "",
     },
-    company_all_Available_names: {
+    company_all_available_names: {
         type: [String],
         default: [],
     },
