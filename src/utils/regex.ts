@@ -1,0 +1,3 @@
+export const phoneRegex = /(?:Tel[:\s]?|Phone[:\s]?|Telephone[:\s]?|Phone Number[:\s]?)?(\+?\d{1,4}[\s.-]?\(?\d{1,4}?\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{0,9})/g;
+
+export const addressRegex = /(?:P\.?\s*O\.?\s*Box\s*\d+|\d{1,5}\s+[A-Za-z0-9\s.,'-]+(?:street|st\.|road|rd\.|avenue|ave\.|blvd\.|lane|ln\.|way|place|pl\.|drive|dr\.|pkwy\.|parkway|building|bldg\.|suite|unit|apt\.|floor|fl\.)?)\s*,?\s*[A-Za-z\s]+,?\s*[A-Za-z]{2,}\s?\d{5}(?:-\d{4})?/i;

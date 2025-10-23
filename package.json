@@ -1,0 +1,45 @@
+{
+  "name": "veridion-challenge-scrapping",
+  "version": "1.0.0",
+  "description": "Veridion Challenge Scrapping",
+  "main": "src/index.ts",
+  "scripts": {
+    "start:dev": "nodemon index.ts",
+    "start": "ts-node index.ts",
+    "lint": "eslint ."
+  },
+  "author": "Aleandro2000",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@types/mongoose-auto-increment": "^5.0.38",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
+  },
+  "dependencies": {
+    "@fastify/compress": "^8.1.0",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/helmet": "^13.0.2",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/swagger": "^9.5.2",
+    "@fastify/swagger-ui": "^5.2.3",
+    "chromium": "^3.0.3",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.1",
+    "fastify-plugin": "^5.1.0",
+    "fuse.js": "^7.1.0",
+    "ioredis": "^5.8.2",
+    "libphonenumber-js": "^1.12.24",
+    "mongoose": "^6.13.8",
+    "mongoose-auto-increment": "^5.0.1",
+    "node-cron": "^4.2.1",
+    "puppeteer-core": "^24.26.0",
+    "zlib": "^1.0.5"
+  }
+}

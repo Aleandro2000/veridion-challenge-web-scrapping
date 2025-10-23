@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always
+    command: 
+      - redis-server
+      - --timeout
+      - "300"
+      - --tcp-keepalive
+      - "300"
+      - --maxmemory
+      - "1gb"
+      - --maxmemory-policy
+      - allkeys-lru
+      - --requirepass
+      - "${REDIS_PASSWORD}"
+    profiles:
+      - production
+      - staging
+    networks:
+      - internal
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - internal
+    profiles:
+      - staging
+
+  nodejs_app:
+    build:
+      context: .
+    container_name: veridion_challenge_backend_app
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - internal
+      - default
+    depends_on:
+      redis:
+        condition: service_started
+    profiles:
+      - production
+      - staging
+
+networks:
+  internal:
+    driver: bridge
