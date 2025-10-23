@@ -6,7 +6,7 @@ services:
     ports:
       - "6379:6379"
     restart: always
-    command: 
+    command: >
       - redis-server
       - --timeout
       - "300"
