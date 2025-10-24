@@ -167,15 +167,6 @@ This job:
 - Updates existing MongoDB documents if the website already exists
 - Creates new entries for new domains
 
-## Metrics and Deliverables
-
-| Metric | Description |
-|--------|-------------|
-| Coverage | Percentage of websites successfully scraped and stored |
-| Fill-rate | Completeness of each profile (phones, address, socials) |
-| Search performance | Average response time for `/search` |
-| Data freshness | Days since last successful scrape |
-
 ## Example Usage
 
 ```bash
