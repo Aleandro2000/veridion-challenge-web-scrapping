@@ -18,6 +18,12 @@ services:
       - allkeys-lru
       - --requirepass
       - "${REDIS_PASSWORD}"
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
     profiles:
       - production
       - staging
@@ -30,6 +36,12 @@ services:
       - "27017:27017"
     networks:
       - internal
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
     profiles:
       - staging
 
