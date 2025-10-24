@@ -179,9 +179,6 @@ This job:
 ## Example Usage
 
 ```bash
-# Run monthly cron job manually
-npm run scrape
-
 # Query API
 GET /search?q=mazautoglass
 GET /getById?id=68fa87a0695c0af524150ca7
