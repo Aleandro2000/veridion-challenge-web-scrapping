@@ -51,7 +51,7 @@ It also includes:
   └──────────────────────────┘
 ```
 
-## Scraping Logic (contactScrapping.ts)
+## Scraping Logic (contact.scrapping.ts)
 
 ### 1. Setup and Navigation
 - Uses `puppeteer-core` with a local `chromium` binary for lightweight automation.
